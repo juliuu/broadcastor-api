@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
 app.get('/channels', (req, res) => {channels.handleChannels(req, res, rp, $, url)})
 
 //Settingg PORT listening
-const PORT = process.env.PORT;
-app.listen(PORT || 3000, () => {
-  console.log(`App is running on PORT: ${PORT}`)
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`App is running on PORT: ${process.env.PORT}`)
 });
